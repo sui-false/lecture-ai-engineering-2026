@@ -27,6 +27,11 @@ def ask(question: str) -> str:
 
     # TODO(第1回 演習): response.usage_metadata から
     #   入力トークン数と出力トークン数を表示してみよう（Copilotに頼んでよい）
+    if response.usage_metadata:
+        prompt_tokens = response.usage_metadata.prompt_token_count
+        candidates_tokens = response.usage_metadata.candidates_token_count
+        total_tokens = response.usage_metadata.total_token_count
+        print(f"[トークン数] 入力: {prompt_tokens}, 出力: {candidates_tokens}, 合計: {total_tokens}")
 
     return response.text
 
