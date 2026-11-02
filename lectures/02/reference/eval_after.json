@@ -3,6 +3,7 @@
     "label": "after",
     "n": 21,
     "format_rate": 1.0,
+<<<<<<< HEAD
     "content_rate": 0.9523809523809523,
     "both_rate": 0.9523809523809523,
     "seconds": 45.4
@@ -11,6 +12,16 @@
     {
       "question": "商品はいつ頃送られてきますか",
       "raw": "{\"answer\": \"ご注文商品は、決済完了から 3 営業日以内にヤマト運輸にて発送いたします。\", \"needs_review\": false}",
+=======
+    "content_rate": 0.9047619047619048,
+    "both_rate": 0.9047619047619048,
+    "seconds": 42.0
+  },
+  "rows": [
+    {
+      "question": "提出の期限は？",
+      "raw": "{\"answer\": \"課題の提出期限は 9 月 30 日 23:59（日本時間）です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -18,8 +29,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "注文後、何日で発送されるか教えてください",
       "raw": "{\"answer\": \"ご注文商品は、決済完了から 3 営業日以内にヤマト運輸にて発送いたします。\", \"needs_review\": false}",
+=======
+      "question": "提出期限の日付と時刻を教えてください",
+      "raw": "{\"answer\": \"課題の提出期限は 9 月 30 日 23:59（日本時間）です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -27,8 +43,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "荷物の配達会社はどこが指定されていますか",
       "raw": "{\"answer\": \"ご注文商品は、決済完了から 3 営業日以内にヤマト運輸にて発送いたします。\", \"needs_review\": false}",
+=======
+      "question": "課題の締切は何月何日の何時ですか",
+      "raw": "{\"answer\": \"課題の提出期限は 9 月 30 日 23:59（日本時間）です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -36,8 +57,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "出荷後のキャンセルは可能ですか",
       "raw": "{\"answer\": \"発送前であればマイページからキャンセル可能です。発送後は返品手続きとなります。\", \"needs_review\": false}",
+=======
+      "question": "提出場所は？",
+      "raw": "{\"answer\": \"提出先は学習ポータルの「課題」欄です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -45,8 +71,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "発送された後でもキャンセル処理はできますか",
       "raw": "{\"answer\": \"発送前であればマイページからキャンセル可能です。発送後は返品手続きとなります。\", \"needs_review\": false}",
+=======
+      "question": "課題の提出はどこで行いますか",
+      "raw": "{\"answer\": \"提出先は学習ポータルの「課題」欄です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -54,8 +85,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "注文を取り消すにはどこから手続きすればいいですか",
       "raw": "{\"answer\": \"発送前であればマイページからキャンセル可能です。発送後は返品手続きとなります。\", \"needs_review\": false}",
+=======
+      "question": "提出物を出す先を教えてください",
+      "raw": "{\"answer\": \"提出先は学習ポータルの「課題」欄です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -63,8 +99,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "クレジットカード以外の支払いはありますか",
       "raw": "{\"answer\": \"お支払い方法はクレジットカード、PayPay、コンビニ決済がご利用いただけます。\", \"needs_review\": false}",
+=======
+      "question": "PDF 以外でも出せますか",
+      "raw": "{\"answer\": \"提出形式は PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -72,8 +113,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "コンビニでの支払いは選択できますか",
       "raw": "{\"answer\": \"お支払い方法はクレジットカード、PayPay、コンビニ決済がご利用いただけます。\", \"needs_review\": false}",
+=======
+      "question": "提出するファイルの形式は何ですか",
+      "raw": "{\"answer\": \"提出形式は PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -81,8 +127,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "対応している決済手段を一覧で教えてください",
       "raw": "{\"answer\": \"お支払い方法はクレジットカード、PayPay、コンビニ決済がご利用いただけます。\", \"needs_review\": false}",
+=======
+      "question": "提出ファイルは何形式で、いくつ出しますか",
+      "raw": "{\"answer\": \"提出形式は PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -90,8 +141,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "館内にインターネット環境はありますか",
       "raw": "{\"answer\": \"館内全域で無料 Wi-Fi（SSID: Hotel_Guest / PASS: guest2026）をご利用いただけます。\", \"needs_review\": false}",
+=======
+      "question": "相談できる時間帯は？",
+      "raw": "{\"answer\": \"質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -99,8 +155,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "フリーWi-Fiのパスワードは何に設定されていますか",
       "raw": "{\"answer\": \"館内全域で無料 Wi-Fi（SSID: Hotel_Guest / PASS: guest2026）をご利用いただけます。\", \"needs_review\": false}",
+=======
+      "question": "オフィスアワーの曜日と時間を教えてください",
+      "raw": "{\"answer\": \"質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -108,8 +169,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "館内Wi-Fiの接続用SSIDを教えてほしいです",
       "raw": "{\"answer\": \"館内全域で無料 Wi-Fi（SSID: Hotel_Guest / PASS: guest2026）をご利用いただけます。\", \"needs_review\": false}",
+=======
+      "question": "質問を受け付けてもらえるのは何曜日の何時からですか",
+      "raw": "{\"answer\": \"質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -117,8 +183,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "猫と同伴で泊まれますか",
       "raw": "{\"answer\": \"ペットの同伴は、専用のペット同伴可能ルームをご予約の方のみ可能です。\", \"needs_review\": false}",
+=======
+      "question": "締切後の扱いを教えてください",
+      "raw": "{\"answer\": \"期限後の提出は、期限から 48 時間以内なら減点のうえ受け付けます。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -126,8 +197,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "ペットと一緒に泊まるための条件はありますか",
       "raw": "{\"answer\": \"ペットの同伴は、専用のペット同伴可能ルームをご予約の方のみ可能です。\", \"needs_review\": false}",
+=======
+      "question": "提出が締切に間に合わなかったらどうなりますか",
+      "raw": "{\"answer\": \"期限後の提出は、期限から 48 時間以内なら減点のうえ受け付けます。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -135,8 +211,13 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "愛犬を連れて宿泊することは可能でしょうか",
       "raw": "{\"answer\": \"ペットの同伴は、専用のペット同伴可能ルームをご予約の方のみ可能です。\", \"needs_review\": false}",
+=======
+      "question": "期限後に提出した課題は受理されますか",
+      "raw": "{\"answer\": \"期限後の提出は、期限から 48 時間以内なら減点のうえ受け付けます。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
@@ -144,6 +225,7 @@
       "gold_needs_review": false
     },
     {
+<<<<<<< HEAD
       "question": "朝食の営業時間を教えてください",
       "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
       "format_ok": true,
@@ -164,6 +246,10 @@
     {
       "question": "商品の返品期限は何日以内ですか",
       "raw": "{\"answer\": \"発送前であればマイページからキャンセル可能です。発送後は返品手続きとなります。\", \"needs_review\": false}",
+=======
+      "question": "成績はいつ出ますか",
+      "raw": "{\"answer\": \"提出期限は 9 月 30 日 23:59（日本時間）です。\", \"needs_review\": false}",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "format_ok": true,
       "format_reason": "",
       "content_ok": false,
@@ -171,7 +257,11 @@
       "gold_needs_review": true
     },
     {
+<<<<<<< HEAD
       "question": "ホテル周辺におすすめのレストランはありますか",
+=======
+      "question": "講義の録画は公開されますか",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
       "format_ok": true,
       "format_reason": "",
@@ -180,7 +270,11 @@
       "gold_needs_review": true
     },
     {
+<<<<<<< HEAD
       "question": "アメニティにドライヤーは含まれていますか",
+=======
+      "question": "課題の文字数に制限はありますか",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
       "format_ok": true,
       "format_reason": "",
@@ -189,13 +283,38 @@
       "gold_needs_review": true
     },
     {
+<<<<<<< HEAD
       "question": "メールマガジンの配信を停止したいです",
+=======
+      "question": "提出した課題へのフィードバックはもらえますか",
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
       "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
       "format_ok": true,
       "format_reason": "",
       "content_ok": true,
       "both_ok": true,
       "gold_needs_review": true
+<<<<<<< HEAD
+=======
+    },
+    {
+      "question": "参考文献の書き方に指定はありますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "オフィスアワーは事前予約が必要ですか",
+      "raw": "{\"answer\": \"質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+>>>>>>> f07d28c45e629c6687c33eaaddb7750d42aea2f0
     }
   ]
 }
