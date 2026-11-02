@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.9523809523809523,
+    "both_rate": 0.9523809523809523,
+    "seconds": 45.4
+  },
+  "rows": [
+    {
+      "question": "商品はいつ頃送られてきますか",
+      "raw": "{\"answer\": \"ご注文商品は、決済完了から 3 営業日以内にヤマト運輸にて発送いたします。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "注文後、何日で発送されるか教えてください",
+      "raw": "{\"answer\": \"ご注文商品は、決済完了から 3 営業日以内にヤマト運輸にて発送いたします。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "荷物の配達会社はどこが指定されていますか",
+      "raw": "{\"answer\": \"ご注文商品は、決済完了から 3 営業日以内にヤマト運輸にて発送いたします。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "出荷後のキャンセルは可能ですか",
+      "raw": "{\"answer\": \"発送前であればマイページからキャンセル可能です。発送後は返品手続きとなります。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "発送された後でもキャンセル処理はできますか",
+      "raw": "{\"answer\": \"発送前であればマイページからキャンセル可能です。発送後は返品手続きとなります。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "注文を取り消すにはどこから手続きすればいいですか",
+      "raw": "{\"answer\": \"発送前であればマイページからキャンセル可能です。発送後は返品手続きとなります。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "クレジットカード以外の支払いはありますか",
+      "raw": "{\"answer\": \"お支払い方法はクレジットカード、PayPay、コンビニ決済がご利用いただけます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "コンビニでの支払いは選択できますか",
+      "raw": "{\"answer\": \"お支払い方法はクレジットカード、PayPay、コンビニ決済がご利用いただけます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "対応している決済手段を一覧で教えてください",
+      "raw": "{\"answer\": \"お支払い方法はクレジットカード、PayPay、コンビニ決済がご利用いただけます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "館内にインターネット環境はありますか",
+      "raw": "{\"answer\": \"館内全域で無料 Wi-Fi（SSID: Hotel_Guest / PASS: guest2026）をご利用いただけます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "フリーWi-Fiのパスワードは何に設定されていますか",
+      "raw": "{\"answer\": \"館内全域で無料 Wi-Fi（SSID: Hotel_Guest / PASS: guest2026）をご利用いただけます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "館内Wi-Fiの接続用SSIDを教えてほしいです",
+      "raw": "{\"answer\": \"館内全域で無料 Wi-Fi（SSID: Hotel_Guest / PASS: guest2026）をご利用いただけます。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "猫と同伴で泊まれますか",
+      "raw": "{\"answer\": \"ペットの同伴は、専用のペット同伴可能ルームをご予約の方のみ可能です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "ペットと一緒に泊まるための条件はありますか",
+      "raw": "{\"answer\": \"ペットの同伴は、専用のペット同伴可能ルームをご予約の方のみ可能です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "愛犬を連れて宿泊することは可能でしょうか",
+      "raw": "{\"answer\": \"ペットの同伴は、専用のペット同伴可能ルームをご予約の方のみ可能です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "朝食の営業時間を教えてください",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "大浴場や温泉はありますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "商品の返品期限は何日以内ですか",
+      "raw": "{\"answer\": \"発送前であればマイページからキャンセル可能です。発送後は返品手続きとなります。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "ホテル周辺におすすめのレストランはありますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "アメニティにドライヤーは含まれていますか",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "メールマガジンの配信を停止したいです",
+      "raw": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    }
+  ]
+}
