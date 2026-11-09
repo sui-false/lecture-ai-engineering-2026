@@ -6,6 +6,8 @@
 
 import json
 from functools import cache
+import random
+import datetime
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -77,3 +79,46 @@ def get_lecture_summary(lecture: int) -> str:
         available = sorted(p.stem for p in (DATA_DIR / "lectures").glob("*.md"))
         return f"第{lecture}回の要点はまだありません。用意されている回: {', '.join(available)}"
     return path.read_text(encoding="utf-8")
+
+def make_quiz(lecture: int) -> str:
+    """指定した回の用語から 1つを選び、
+    確認問題と答えを返す。
+    「第2回の確認問題を出して」のように、
+    復習用の問題を求められたときに使う。
+    """
+    glossary = load_glossary()
+    
+    # 指定された回の用語を抽出
+    terms_in_lecture = [e for e in glossary if e.get("lecture") == lecture]
+    
+    if not terms_in_lecture:
+        return f"第{lecture}回の用語が見つかりませんでした。別の回を指定してください。"
+    
+    # 用語を1つランダムに選択
+    selected_term = random.choice(terms_in_lecture)
+    
+    # 問題と答えを構築して返す
+    quiz_data = {
+        "question": f"以下の定義に当てはまる用語は何でしょうか？\n\n「{selected_term['definition']}」",
+        "answer": selected_term['term']
+    }
+    
+    return json.dumps(quiz_data, ensure_ascii=False)
+
+def save_learning_log(content: str, title: str = "log") -> str:
+    """学習の記録やまとめを learning_log/ フォルダに保存する。
+    
+    学んだ内容をマークダウン形式などでファイルとして保存します。
+    """
+    log_dir = Path("learning_log")
+    log_dir.mkdir(exist_ok=True)
+    
+    # タイムスタンプをつけて安全なファイル名にする
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    safe_title = "".join(c for c in title if c.isalnum() or c in (" ", "-", "_")).strip()
+    filename = f"{timestamp}_{safe_title}.md"
+    
+    filepath = log_dir / filename
+    filepath.write_text(content, encoding="utf-8")
+    
+    return f"学習記録を {filepath} に保存しました。"

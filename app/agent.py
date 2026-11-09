@@ -24,6 +24,7 @@ from pydantic_ai.messages import ToolCallPart, ToolReturnPart
 from pydantic_ai.models.google import GoogleModel
 from pydantic_ai.models.test import TestModel
 from pydantic_ai.providers.google import GoogleProvider
+from pydantic_ai.capabilities import HandleDeferredToolCalls
 
 from app import tools
 from app.config import MODEL, api_error_message, get_api_key
@@ -36,13 +37,41 @@ INSTRUCTIONS = """\
 - 回答の最後に、関係する回（第N回）を示す。
 - 宿題の答えそのものは書かず、考え方のヒントで導く。
 """
+from pydantic_ai import Agent
+from pydantic_ai.capabilities import HandleDeferredToolCalls
+
+
+def cli_approval_handler(ctx, requests):
+    """ deferred tool call の承認フローを処理する CLI 用ハンドラー """
+    # requests (DeferredToolRequests) 内の個々の呼び出し (.calls) をループ
+    for call in requests.calls:
+        print(f"\n[確認] エージェントがツール '{call.tool_name}' を実行しようとしています。")
+        print(f"引数: {call.args}")
+        ans = input("実行を許可して保存しますか？ (y/n): ")
+        if ans.lower() in ("y", "yes"):
+            call.approve()
+        else:
+            call.reject("ユーザーによって保存がキャンセルされました。")
+
+    # 承認状態が更新された requests をそのまま返す
+    return requests
 
 # モデルは実行時に渡す（テストではAPIを呼ばない TestModel に差し替えるため）
-agent = Agent(instructions=INSTRUCTIONS)
+# agent = Agent(instructions=INSTRUCTIONS)
+agent = Agent(
+    instructions=INSTRUCTIONS,
+    capabilities=[HandleDeferredToolCalls(handler=cli_approval_handler)]
+)
+
 agent.tool_plain(tools.search_glossary)
 agent.tool_plain(tools.get_lecture_summary)
 
 # TODO(第3回 演習): tools.py に make_quiz を作り、ここで登録しよう
+agent.tool_plain(tools.make_quiz)
+
+# 第3回 演習追加: 学習記録を保存するツール（保存前に利用者の確認を必須にする）
+agent.tool_plain(tools.save_learning_log, requires_approval=True)
+
 
 # 第5回: 使う MCP サーバーの設定ファイル。Claude Desktop や Cursor と同じ "mcpServers" 形式
 MCP_CONFIG = Path(__file__).resolve().parent / "mcp_servers.json"
@@ -71,10 +100,16 @@ def load_mcp_servers(config_path: Path = MCP_CONFIG) -> list[MCPToolset]:
     return toolsets
 
 
-def build_mcp_agent(config_path: Path = MCP_CONFIG) -> Agent:
-    """第5回: 関数を直接登録する代わりに、MCP サーバーが公開するツールを使うエージェント。INSTRUCTIONS は同じ。"""
-    return Agent(instructions=INSTRUCTIONS, toolsets=load_mcp_servers(config_path))
+# def build_mcp_agent(config_path: Path = MCP_CONFIG) -> Agent:
+#     """第5回: 関数を直接登録する代わりに、MCP サーバーが公開するツールを使うエージェント。INSTRUCTIONS は同じ。"""
+#     return Agent(instructions=INSTRUCTIONS, toolsets=load_mcp_servers(config_path))
 
+def build_mcp_agent(config_path: Path = MCP_CONFIG) -> Agent:
+    return Agent(
+        instructions=INSTRUCTIONS, 
+        toolsets=load_mcp_servers(config_path),
+        capabilities=[HandleDeferredToolCalls(handler=cli_approval_handler)]
+    )
 
 def build_model() -> GoogleModel:
     return GoogleModel(MODEL, provider=GoogleProvider(api_key=get_api_key()))
