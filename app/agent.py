@@ -42,19 +42,18 @@ from pydantic_ai.capabilities import HandleDeferredToolCalls
 
 
 def cli_approval_handler(ctx, requests):
-    """ deferred tool call の承認フローを処理する CLI 用ハンドラー """
-    # requests (DeferredToolRequests) 内の個々の呼び出し (.calls) をループ
-    for call in requests.calls:
-        print(f"\n[確認] エージェントがツール '{call.tool_name}' を実行しようとしています。")
-        print(f"引数: {call.args}")
-        ans = input("実行を許可して保存しますか？ (y/n): ")
-        if ans.lower() in ("y", "yes"):
-            call.approve()
-        else:
-            call.reject("ユーザーによって保存がキャンセルされました。")
+    """保存内容を表示し、利用者の承認結果を返す。"""
+    approvals = {}
+    for call in requests.approvals:
+        print(f"\n[確認] ツール: {call.tool_name}")
+        print(json.dumps(call.args_as_dict(), ensure_ascii=False, indent=2))
+        try:
+            answer = input("この内容を保存しますか？ (y/n): ")
+        except EOFError:
+            answer = "n"
+        approvals[call.tool_call_id] = answer.strip().lower() in ("y", "yes")
 
-    # 承認状態が更新された requests をそのまま返す
-    return requests
+    return requests.build_results(approvals=approvals)
 
 # モデルは実行時に渡す（テストではAPIを呼ばない TestModel に差し替えるため）
 # agent = Agent(instructions=INSTRUCTIONS)
